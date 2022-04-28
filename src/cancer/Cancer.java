@@ -43,14 +43,15 @@ public class Cancer {
         }
         System.out.println("");
         System.out.println("");
-        
-        for(int i = 0; i<grid.length;i++){
-            for(int j = 0; j<grid[0].length;j++){
-                if(grid[i][j]=="-"){
-                    grid[i][j] = " ";
+        for(int i = 0; i<grid.length; i++){
+            for(int j = 0; j<grid[i].length; j++){
+                if(grid[i][j] == "-"){
+                    floodFill(grid,i,j);
                 }
             }
         }
+        
+        
         for(int i = 0; i<grid.length;i++){
             for(int j = 0; j<grid[0].length;j++){
                 System.out.print(grid[i][j]);
